@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DB367334-44E3-4B98-9994-120EE10313C1}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lithnet.Moveuser</RootNamespace>
+    <AssemblyName>lithnet.moveuser</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountMigrationJob.cs" />
+    <Compile Include="Enums\RegistryRights.cs" />
+    <Compile Include="Enums\RegWow64Options.cs" />
+    <Compile Include="Enums\AccountState.cs" />
+    <Compile Include="Enums\ProfileMappingState.cs" />
+    <Compile Include="Enums\MoveUserModes.cs" />
+    <Compile Include="Enums\ProfileMigrationStatus.cs" />
+    <Compile Include="Enums\MappedGenericRights.cs" />
+    <Compile Include="Enums\GenericRights.cs" />
+    <Compile Include="Enums\PostMoveActions.cs" />
+    <Compile Include="Enums\SecurityInformation.cs" />
+    <Compile Include="Enums\SeObjectType.cs" />
+    <Compile Include="Enums\SidNameUse.cs" />
+    <Compile Include="GroupCopyResults.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="Advapi32.cs" />
+    <Compile Include="Logging.cs" />
+    <Compile Include="MoveUserException.cs" />
+    <Compile Include="PrincipalManagement.cs" />
+    <Compile Include="PrinpicalObject.cs" />
+    <Compile Include="Structs\OsVersionInfoEx.cs" />
+    <Compile Include="Structs\SidMapping.cs" />
+    <Compile Include="Structs\TokenPrivileges.cs" />
+    <Compile Include="Structs\LuidAndAttributes.cs" />
+    <Compile Include="Structs\Luid.cs" />
+    <Compile Include="SystemManagement.cs" />
+    <Compile Include="UserProfileMigration.cs" />
+    <Compile Include="Profmap.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="RegistryManagement.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
