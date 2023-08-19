@@ -53,7 +53,7 @@ Download the [current release](https://github.com/lithnet/moveuser/releases/)
 * Want to fix an issue yourself or add functionality? Clone the project and submit a pull request
 
 ## Enteprise support
-Lithnet offer enterprise support plans for our open-source products. Deploy our tools with confidence that you have the backing of the dedicated Lithnet support team if you run into any issues, have questions, or need advice. Reach out to support@lithnet.io and we'll put together a quote.
+Lithnet offer enterprise support plans for our open-source products. Deploy our tools with confidence that you have the backing of the dedicated Lithnet support team if you run into any issues, have questions, or need advice. Fill out our [contact form](https://lithnet.io/contact-us), let us know the number of users in your environment, and we'll put together a quote.
 
 ## Keep up to date
 * [Visit our blog](http://blog.lithnet.io)
